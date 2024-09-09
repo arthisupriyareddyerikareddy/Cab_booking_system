@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Cab</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script>
+        // JavaScript to update the price per kilometer dynamically when a cab type is selected
+        function updatePrice() {
+            var cabType = document.getElementById("select-cab").value;
+            var pricePerKm = {
+                "Sedan": 10,  // Example prices
+                "SUV": 15,
+                "Bike": 5,
+                "Mini": 8,
+                "Luxury": 20,
+                "Outstation": 12
+            };
+            document.getElementById("price-per-km").textContent = pricePerKm[cabType] ? pricePerKm[cabType] + " USD/km" : "Select a cab type";
+        }
+    </script>
+</head>
+<body>
+    <!-- Booking Form Section -->
+    <section id="booking-form">
+        <div class="container">
+            <h1>Book Your Cab</h1>
+            <form id="cab-booking-form" method="post" action="/confirm-booking">
+
+                <!-- Pickup Location -->
+                <label for="pickup-location">Pickup Location:</label>
+                <select id="pickup-location" name="pickup_location" required>
+                    <option value="" disabled selected>Select your pickup location</option>
+                    <option value="New York, NY">New York, NY</option>
+                    <option value="Los Angeles, CA">Los Angeles, CA</option>
+                    <option value="Chicago, IL">Chicago, IL</option>
+                    <option value="Houston, TX">Houston, TX</option>
+                    <option value="Phoenix, AZ">Phoenix, AZ</option>
+                    <option value="Philadelphia, PA">Philadelphia, PA</option>
+                    <option value="San Antonio, TX">San Antonio, TX</option>
+                    <option value="San Diego, CA">San Diego, CA</option>
+                    <option value="Dallas, TX">Dallas, TX</option>
+                    <option value="San Jose, CA">San Jose, CA</option>
+                </select>
+
+                <!-- Drop Location -->
+                <label for="drop-location">Drop Location:</label>
+                <select id="drop-location" name="drop_location" required>
+                    <option value="" disabled selected>Select your drop location</option>
+                    <option value="New York, NY">New York, NY</option>
+                    <option value="Los Angeles, CA">Los Angeles, CA</option>
+                    <option value="Chicago, IL">Chicago, IL</option>
+                    <option value="Houston, TX">Houston, TX</option>
+                    <option value="Phoenix, AZ">Phoenix, AZ</option>
+                    <option value="Philadelphia, PA">Philadelphia, PA</option>
+                    <option value="San Antonio, TX">San Antonio, TX</option>
+                    <option value="San Diego, CA">San Diego, CA</option>
+                    <option value="Dallas, TX">Dallas, TX</option>
+                    <option value="San Jose, CA">San Jose, CA</option>
+                </select>
+
+                <!-- Select Cab Type -->
+                <label for="select-cab">Select Cab:</label>
+                <select id="select-cab" name="cab_type" onchange="updatePrice()" required>
+                    <option value="" disabled selected>Select your cab type</option>
+                    <option value="Sedan">Sedan</option>
+                    <option value="SUV">SUV</option>
+                    <option value="Bike">Bike</option>
+                    <option value="Mini">Mini</option>
+                    <option value="Luxury">Luxury</option>
+                    <option value="Outstation">Outstation</option>
+                </select>
+
+                <!-- Display Price Per Kilometer -->
+                <p>Price per kilometer: <span id="price-per-km">Select a cab type</span></p>
+
+                <!-- Name -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <!-- Email -->
+                <label for="email">Email ID:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <!-- Contact Number -->
+                <label for="phone">Contact Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your contact number" required>
+
+                <!-- Submit Button -->
+                <button type="submit">Book Now</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>

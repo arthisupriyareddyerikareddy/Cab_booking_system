@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cab Booking System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Book Your Cab</h1>
+        <form action="/book" method="post">
+            <label for="pickup_location">Pickup Location:</label>
+            <select id="pickup_location" name="pickup_location">
+                <!-- Options will be filled by JavaScript -->
+            </select>
+
+            <label for="drop_location">Drop Location:</label>
+            <select id="drop_location" name="drop_location">
+                <!-- Options will be filled by JavaScript -->
+            </select>
+
+            <label for="cab_id">Select Cab:</label>
+            <select id="cab_id" name="cab_id">
+                <!-- Options will be filled by JavaScript -->
+            </select>
+
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

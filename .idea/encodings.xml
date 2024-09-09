@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/database.db" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/insert_data.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/models.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/requirements.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/routes.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/static/css/style.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/static/js/script.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/templates/booking.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/templates/index.html" charset="UTF-8" />
+  </component>
+</project>

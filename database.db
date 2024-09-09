@@ -1,0 +1,15 @@
+from app import db, Cab
+
+cab1 = Cab(cab_type="Sedan", location="Downtown", price_per_km=10)
+cab2 = Cab(cab_type="SUV", location="Airport", price_per_km=15)
+cab3 = Cab(cab_type="Hatchback", location="Suburb", price_per_km=8)
+cab4 = Cab(cab_type="Luxury", location="City Center", price_per_km=20)
+cab5 = Cab(cab_type="Electric", location="Tech Park", price_per_km=12)
+
+db.session.add(cab1)
+db.session.add(cab2)
+db.session.add(cab3)
+db.session.add(cab4)
+db.session.add(cab5)
+
+db.session.commit()
