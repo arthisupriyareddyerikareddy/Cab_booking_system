@@ -1,5 +1,5 @@
 **Cab Booking System**
-A web-based cab booking system built using Flask and SQLite. This application allows users to book a cab by providing details such as pickup location, drop location, cab type, and personal information. The system calculates the total cost based on the cab type and distance traveled.
+A web-based cab booking system built using Flask and SQLite along with FastAPI. This application allows users to book a cab by providing details such as pickup location, drop location, cab type, and personal information. The system calculates the total cost based on the cab type and distance traveled.
 
 **Features**
 **Cab Booking:** Allows users to select pickup and drop locations from predefined options.
@@ -23,3 +23,17 @@ Flask
 SQLite
 Jinja2 for templating
 Fast API**
+
+**Usage**
+**Open the App:** Access the form to book a cab.
+**Select Locations:** Choose your pickup and drop locations from the dropdown menus.
+**Select Cab Type:** Pick a cab type like Sedan, SUV, etc., from the list.
+**Fill in Personal Details:** Enter your name, email, and phone number.
+**Confirm Booking:** After submitting, view the total cost and confirmation on the next page.
+
+**Future Improvements**
+**Dynamic Location Fetching:** Implement real-time location suggestions using an API like Google Maps.
+**Payment Integration:** Add an option to pay for the cab online via credit card or wallet.
+**Ride History:** Allow users to view past rides.
+**Real-Time Distance Calculation:** Automatically calculate distance using GPS or a maps API instead of predefined distances.
+
