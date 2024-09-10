@@ -105,7 +105,7 @@ Cab_booking_system/
 
 ## Known Issues
 
-- ![Cab Background](images/cab-background1.jpg)
+- ![Homepage](images/cab-background1.jpg)
 
 ## Future Enhancements
 
