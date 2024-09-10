@@ -14,7 +14,7 @@ This project is a web-based Cab Booking System developed using Flask, SQLAlchemy
 
 ## Technologies Used
 
-- **Flask:** Python web framework for building the backend of the application.
+- **Flask and Fast API** Python web framework for building the backend of the application.
 - **Jinja2:** Templating engine used with Flask for rendering HTML pages.
 - **SQLite:** Lightweight database system used for storing cab booking data.
 - **SQLAlchemy:** ORM for database interactions in Flask.
