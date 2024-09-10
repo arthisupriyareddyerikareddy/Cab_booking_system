@@ -105,7 +105,7 @@ Cab_booking_system/
 
 ## Known Issues
 
-- Background image might not load properly in some environments. Ensure the correct path is set in the `style.css` file.
+- ![Cab Background](images/cab-background1.jpg)
 
 ## Future Enhancements
 
