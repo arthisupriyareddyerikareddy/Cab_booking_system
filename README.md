@@ -103,10 +103,6 @@ Cab_booking_system/
 - **Luxury:** $20 per km
 - **Outstation:** $12 per km
 
-## Known Issues
-
-- ![Homepage](images/cab-background1.jpg)
-
 ## Future Enhancements
 
 - Add user authentication for registered users.
