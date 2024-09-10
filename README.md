@@ -3,97 +3,112 @@
 
 ## Overview
 
-The **Cab Booking System** is a web application built using Python's Flask framework and SQLite as the database. It allows users to book cabs by selecting a pickup and drop location, choosing a cab type, and providing their personal details. The system calculates the total cost of the trip based on the type of cab and the distance between the locations.
+This project is a web-based Cab Booking System developed using Flask, SQLAlchemy, and SQLite. The system allows users to book a cab by selecting pickup and drop locations, along with the type of cab, and receive a fare estimation. It includes a user-friendly interface with dynamic price calculation based on the cab type.
 
 ## Features
 
-- **Cab Booking Form**: Users can select a pickup location, drop location, and cab type.
-- **Dynamic Pricing**: The price per kilometer changes based on the selected cab type.
-- **Distance Calculation**: Calculates the distance between pickup and drop locations.
-- **Fare Estimation**: Provides a fare estimate based on the cab type and distance.
-- **User Confirmation**: Shows a confirmation page with booking details after submitting the form.
-- **Background Image**: Provides a visually appealing background for the booking form.
+- **Booking Form:** Users can enter pickup location, drop location, cab type, name, email, and contact number.
+- **Price Estimation:** Price per kilometer varies depending on the selected cab type.
+- **Dynamic Interface:** The system uses a background image and a modern layout to provide a great user experience.
+- **Confirmation Page:** After booking, users get a confirmation of their ride with details like distance, cab type, and total fare.
 
 ## Technologies Used
 
-- **Backend**: Flask (Python), Fast API
-- **Database**: SQLite
-- **Frontend**: HTML, CSS, JavaScript
-- **Template Engine**: Jinja2
+- **Flask:** Python web framework for building the backend of the application.
+- **Jinja2:** Templating engine used with Flask for rendering HTML pages.
+- **SQLite:** Lightweight database system used for storing cab booking data.
+- **SQLAlchemy:** ORM for database interactions in Flask.
+- **HTML/CSS:** For the frontend design.
+- **JavaScript:** For dynamic price calculation based on the cab type.
 
-## Prerequisites
+## Project Structure
 
-- Python 3.x installed on your system.
-- Basic knowledge of Flask, Python, and SQL.
+```
+Cab_booking_system/
+│
+├── static/
+│   ├── css/
+│   │   └── style.css          # Stylesheet for the web interface
+│   └── images/
+│       └── cab-background1.jpg # Background image for the booking form
+│
+├── templates/
+│   ├── booking_form.html       # Main booking form page
+│   └── confirmation.html       # Booking confirmation page
+│
+├── app.py                      # Main Flask application
+├── models.py                   # SQLAlchemy models for database
+├── README.md                   # Project documentation (this file)
+├── requirements.txt            # List of dependencies for the project
+└── config.py                   # Configuration settings for the app
+
+```
 
 ## Setup Instructions
 
-1. **Clone the repository**:
+1. **Clone the Repository:**
+
    ```bash
-   git clone https://github.com/yourusername/Cab_booking_system.git
+   git clone https://github.com/your-username/Cab_booking_system.git
    cd Cab_booking_system
    ```
 
-2. **Create a virtual environment**:
+2. **Create a Virtual Environment:**
+
    ```bash
    python -m venv venv
+   source venv/bin/activate    # On Windows, use `venv\Scripts\activate`
    ```
 
-3. **Activate the virtual environment**:
-   - On Windows:
-     ```bash
-     venv\Scripts\activate
-     ```
-   - On macOS/Linux:
-     ```bash
-     source venv/bin/activate
-     ```
+3. **Install Dependencies:**
 
-4. **Install dependencies**:
+   Install the required dependencies by running:
+
    ```bash
    pip install -r requirements.txt
    ```
 
-5. **Set up the database**:
+4. **Set Up the Database:**
+
+   Run the following command to set up the SQLite database and create the necessary tables:
+
    ```bash
-   flask db init
-   flask db migrate -m "Initial migration"
-   flask db upgrade
+   python app.py
    ```
 
-6. **Run the application**:
+5. **Run the Application:**
+
+   Start the Flask development server:
+
    ```bash
    flask run
    ```
-   The app will be available at `http://127.0.0.1:5000/`.
 
-## Project Structure
+   Open your browser and go to `http://127.0.0.1:5000/` to access the booking system.
 
-- **app.py**: The main Flask application that handles routes and logic.
-- **templates/**: Contains the HTML templates (Jinja2 format).
-  - `booking_form.html`: The form for booking a cab.
-  - `confirmation.html`: Displays booking details after confirmation.
-- **static/**: Contains static files such as CSS, images, and JavaScript.
-  - `style.css`: Styling for the booking form.
-  - `cab-background1.jpg`: Background image for the booking form.
-- **models.py**: Defines the database models for storing cab details and bookings.
-- **database.db**: SQLite database file where booking and cab data is stored.
+## Usage Instructions
 
-## How it Works
+1. Enter the pickup and drop locations from the dropdown menu.
+2. Select the type of cab you want to book.
+3. Enter your name, email, and contact number.
+4. Click the **Book Now** button to confirm the booking.
+5. On the confirmation page, review the booking details and fare calculation.
 
-1. **User Interaction**: 
-   - The user selects the pickup and drop locations from the dropdown menus.
-   - They choose the cab type (e.g., Sedan, SUV, Bike, etc.).
-   - They enter their name, email, and phone number.
-   - After submitting, the total cost is calculated based on the distance between locations and the price per kilometer for the selected cab type.
-   - The confirmation page shows a summary of the booking details.
+## Pricing Model
+
+- **Sedan:** $10 per km
+- **SUV:** $15 per km
+- **Bike:** $5 per km
+- **Mini:** $8 per km
+- **Luxury:** $20 per km
+- **Outstation:** $12 per km
+
+## Known Issues
+
+- Background image might not load properly in some environments. Ensure the correct path is set in the `style.css` file.
 
 ## Future Enhancements
 
-- Adding real-time distance calculation using a mapping API.
-- Integration with payment gateways for secure online payments.
-- Adding user authentication for storing previous bookings.
-
-## License
-
-This project is licensed under the MIT License.
+- Add user authentication for registered users.
+- Implement Google Maps API to calculate the exact distance between pickup and drop locations.
+- Add more detailed pricing and surge pricing during peak hours.
